@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import { ListGroup, ListGroupItem } from 'react-bootstrap';
 
 class Todo extends Component {
     constructor() {
@@ -16,19 +18,25 @@ class Todo extends Component {
     renderTodoList() {
         let tmpList = [];
         for (let i=0; i<this.state.todoList.length; i++) {
-            tmpList.push(<li>{this.state.todoList[i]}</li>);
+            tmpList.push(
+                <ListGroupItem style={{textAlign:"left"}}>
+                    {this.state.todoList[i]}
+                </ListGroupItem>
+             );
         }
         return tmpList;
-    }
+    } 
+
+
     render() {
         return (
         <div>
-        <ol>
-        {this.renderTodoList()}
-        </ol>
+            <ListGroup>
+                {this.renderTodoList()}
+            </ListGroup>
         </div>
-        )
-    }
+         )
+     } 
 }
 
 export default Todo;

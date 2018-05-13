@@ -4,15 +4,12 @@ import './App.css';
 import Todo from './Todo';
 
 class App extends Component {
-
+    
   render() {
     return (
-      <div >
-        <header>
-          <h1>To Do List</h1>
-        </header>
+      <div>
+        <h1 >To Do List</h1>
         <Todo />
-
       </div>
     );
   }
