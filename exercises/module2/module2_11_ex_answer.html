@@ -15,7 +15,7 @@
     <title>Component Lifecycle</title>
 </head>
 <body>
-	<div id="react-container"></div>
+	<div id="root"></div>
 
 	<script type="text/babel">
 	
@@ -23,14 +23,21 @@
 			constructor(props) {
 				super(props)
 				this.state = {
-					backgroundColor: 'purple'
+					backgroundColor: 'purple',
 				}
 				this.update = this.update.bind(this)
 			}
+
 			update() {
-				this.setState({
+				if (this.state.backgroundColor == 'purple') {
+					this.setState({
 					backgroundColor: 'green'
-				})
+					})
+				} else {
+					this.setState({
+					backgroundColor: 'purple'
+					})
+				}
 			}
 
 			render() {
@@ -42,7 +49,7 @@
 			}
 		}
 
-		ReactDOM.render(<Box />, document.getElementById('react-container'))
+		ReactDOM.render(<Box />, document.getElementById('root'))
 
 	</script>
 
