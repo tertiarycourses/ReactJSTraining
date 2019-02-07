@@ -19,7 +19,7 @@ export default class Hello extends React.Component {
     }
 
     addHobby() {
-        let hobby = this._hobbyInput.value;
+        let hobby = this.hobbyInput.value;
         this.setState({
             hobby: this.state.hobby.concat([hobby])
         })
@@ -29,7 +29,7 @@ export default class Hello extends React.Component {
       return (
         <div>
             <h1> Hello {this.props.name}</h1>
-            <input ref={input => this._hobbyInput = input}/><br/>
+            <input ref={input => this.hobbyInput = input}/><br/>
             <button onClick = {this.addHobby}>Add your hobby</button>
             
             <p>My hobbies are: </p>

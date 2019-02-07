@@ -1,34 +1,33 @@
 import React, { Component } from 'react';
 
 class Todo extends Component {
+
     constructor() {
         super();
         this.state = {
-            todoList: [
-                "Buy Groceries",
-                "Buy Lunch",
-                "Buy Dinner",
-                "Book Appointments"
+            todoList : [
+                'Buy Grocery', 
+                'Watch Movie',
+                'Swimming',
+                'Running'
             ]
         }
-    }
     
-    renderTodoList() {
-        let tmpList = [];
-        for (let i=0; i<this.state.todoList.length; i++) {
-            tmpList.push(<li>{this.state.todoList[i]}</li>);
-        }
-        return tmpList;
     }
+
+
     render() {
+        const itemList = this.state.todoList.map((item)=>
+            <li>{item}</li>
+            );
         return (
-        <div>
-        <ol>
-        {this.renderTodoList()}
-        </ol>
-        </div>
-        )
+            <div>
+                <h1>To Do List:</h1>
+                <ol>
+                    {itemList}
+                </ol>
+            </div>
+            )
     }
 }
-
 export default Todo;
