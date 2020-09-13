@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>    
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            
+            const PlacesList = [
+                "Singapore Zoo", 
+                "Gardens by the Bay", 
+                "Chinatown",
+                "Universal Studio Singapore"
+            ];
+
+            const App = ({places}) => (
+                <ul>
+                    {places.map((place, i) => 
+                        //add your code here
+                    )}
+                </ul>
+            )
+            
+            ReactDOM.render(
+                <App places={PlacesList}/>,
+                document.getElementById("root")
+            );
+
+
+        </script>
+    </body>
+</html>
