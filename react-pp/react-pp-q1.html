@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>    
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            
+            //Add your custom function code here
+
+            const App = () => (
+                <div>
+                    <ul>
+                    <Places name="Singapore Zoo" />
+                    <Places name="Gardens by the Bay" />
+                    <Places name="Chinatown" />
+                    <Places name="Universal Studio Singapore" />
+                    </ul>
+                </div>
+            );
+            
+            ReactDOM.render(
+                <App />,
+                document.getElementById("root")
+            );
+        </script>
+    </body>
+</html>

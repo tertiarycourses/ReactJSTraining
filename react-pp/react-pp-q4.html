@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>    
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            
+            const PlacesList = [
+                "Singapore Zoo", 
+                "Gardens by the Bay", 
+                "Chinatown",
+                "Universal Studio Singapore"
+            ];
+
+            class App extends React.Component {
+                state = {
+                    loggedIn: false
+                }
+                //Add your code here 
+                render() {
+                    return (
+                        <div>
+                            <button onClick={this.logIn}>Log In</button>
+                            <button onClick={this.logOut}>Log Out</button>
+                            <p>The user is {
+                            this.state.loggedIn ? "logged in" : "not logged in"}.</p>
+                            <ul>
+                             //Add your code here 
+                            </ul>
+                        </div>
+                        )
+                    }
+                }
+
+                ReactDOM.render(
+                    <App places={PlacesList}/>,
+                    document.getElementById("root")
+                );
+        </script>
+    </body>
+</html>
