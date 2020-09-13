@@ -12,7 +12,11 @@
 
 	<script type="text/babel">
 
-		const Hello = (props) => <div><h1>Hello {props.name}</h1><p>Learning React Version {props.version}</p></div>
+		const Hello = ({name,version}) => 
+			<div>
+				<h1>Hello {name}</h1>
+				<p>Learning React Version {version}</p>
+			</div>
 
 	
 		ReactDOM.render(
@@ -24,6 +28,10 @@
 
 </body>
 </html>
+
+
+
+
 
 
 
